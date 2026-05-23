@@ -171,35 +171,6 @@ npm run dev        # webpack-dev-server，/api 代理 → localhost:3000
 
 > **注意：** AI Agent 功能需要有效的 API Key（当前使用智谱 GLM，也支持 DeepSeek/OpenAI 兼容格式）。
 
-## API 概览
-
-| 模块 | 路径 | 说明 |
-|------|------|------|
-| 认证 | `POST /api/auth/register` | 注册 |
-| 认证 | `POST /api/auth/login` | 登录 |
-| 认证 | `GET /api/auth/verify` | Token 验证 |
-| 用户 | `GET /api/auth/profile` | 获取个人资料（含头像） |
-| 用户 | `PUT /api/auth/profile` | 更新资料（用户名/简介/头像） |
-| 用户 | `PUT /api/auth/password` | 修改密码 |
-| 用户 | `GET /api/auth/users/search?q=` | 搜索用户 |
-| 会话 | `GET/POST /api/conversations` | 会话列表/创建 |
-| 会话 | `POST/DELETE /api/conversations/:id/participants` | 管理参与者 |
-| 消息 | `GET /api/messages/:conversationId?limit=50&offset=0` | 分页获取消息 |
-| 消息 | `POST /api/messages/:conversationId` | 发送消息 |
-| 消息 | `DELETE /api/messages/:conversationId` | 清空消息 |
-| 任务 | `GET/POST /api/tasks` | 任务列表/创建 |
-| 任务 | `PUT/DELETE /api/tasks/:id` | 更新/删除任务 |
-| 任务 | `POST /api/tasks/:id/execute` | 流式执行任务 (SSE) |
-| 任务 | `POST /api/tasks/:id/stop` | 中止执行 |
-| Agent | `GET /api/agents` | Agent 列表 |
-| Agent | `POST /api/agents/chat` | Agent 对话 |
-| 代码 | `POST /api/code/compare` | 创建 Diff |
-| 代码 | `GET /api/code/reviews` | 审查记录查询 |
-| 部署 | `POST /api/deploy` | 触发部署 |
-| 部署 | `POST /api/deploy/upload` | 文件上传部署 |
-| 部署 | `GET /api/deploy/history` | 部署历史 |
-| 健康 | `GET /api/health` | 健康检查 (无需认证) |
-
 ## WebSocket 消息类型
 
 | 类型 | 方向 | 说明 |
