@@ -1,0 +1,20 @@
+node_modules/
+dist/
+*.db
+*.db-journal
+.env
+.env.local
+.env.*.local
+uploads/
+temp/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Claude
+.claude/
